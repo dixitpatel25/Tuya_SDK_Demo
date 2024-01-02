@@ -20,23 +20,23 @@
 ## **Setup**
 
 ## **Added required gradle**
-# dagger:hilt --> Require this library for dependency injection.
-# viewmodel(MVVM) --> Require this library for setup mvvm architecture
-# livedata(MVVM) --> Require this library for displaying the latest data.
-# coroutines --> Require this library for manage threads
-# navigation --> Require this library for manage screen change
-# SpinKit --> Require this library for show progress bar
-# thingsmart --> Require this library for login,sign up,add home,device config
-# thingsmart-ipcsdk --> Require this library for preview camera screen
-# fastjson --> Require this library for thingsmart SDK 
-# fastjson --> Require this library for thingsmart SDK 
-# okhttp3 --> Require this library for thingsmart SDK 
-# soloader --> Require this library for thingsmart SDK 
-# sdp --> Require this library for Ui management Like if you run this apk tablet you can same screen preview like phone
-# ssp --> Require this library for Ui-Text size mange same of above
-# CountrySelectionDialog --> Require this library for country pick
-# gson --> Require this library for convert json to string
-# yipianfengye -->  Require this library for generate qrcode
+* dagger:hilt --> Require this library for dependency injection.
+* viewmodel(MVVM) --> Require this library for setup mvvm architecture
+* livedata(MVVM) --> Require this library for displaying the latest data.
+* coroutines --> Require this library for manage threads
+* navigation --> Require this library for manage screen change
+* SpinKit --> Require this library for show progress bar
+* thingsmart --> Require this library for login,sign up,add home,device config
+* thingsmart-ipcsdk --> Require this library for preview camera screen
+* fastjson --> Require this library for thingsmart SDK 
+* fastjson --> Require this library for thingsmart SDK 
+* okhttp3 --> Require this library for thingsmart SDK 
+* soloader --> Require this library for thingsmart SDK 
+* sdp --> Require this library for Ui management Like if you run this apk tablet you can same screen preview like phone
+* ssp --> Require this library for Ui-Text size mange same of above
+* CountrySelectionDialog --> Require this library for country pick
+* gson --> Require this library for convert json to string
+* yipianfengye -->  Require this library for generate qrcode
 
 # **For run this project in your android studio**
 * first of open android studio in your pc then click open box and select directiories where you save this project and open that

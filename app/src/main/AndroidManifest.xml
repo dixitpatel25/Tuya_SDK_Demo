@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:name="com.demo.beavair.TuyaDemoApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TuyaSDKDemo"
+        android:requestLegacyExternalStorage="true"
+        tools:replace="android:allowBackup,android:supportsRtl"
+        tools:targetApi="31" >
+
+        <activity
+            android:name="com.demo.beavair.activity.LoginActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.demo.beavair.activity.MainActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="THING_SMART_APPKEY"
+            android:value="xu5grcnrkrks5vt89mt4" />
+        <meta-data
+            android:name="THING_SMART_SECRET"
+            android:value="yga8p9afg3wgre858m5wuay8gkt3wkfm" />
+    </application>
+
+</manifest>

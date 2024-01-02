@@ -1,0 +1,138 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clicks"
+            type="com.demo.beavair.fragment.ipc.CameraPanelViewClicks" />
+
+        <variable
+            name="viewModel"
+            type="com.demo.beavair.fragment.ipc.CameraPanelViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        tools:context="com.demo.beavair.fragment.ipc.CameraPanelFragment">
+
+        <RelativeLayout
+            android:id="@+id/relativeHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:elevation="@dimen/_5sdp">
+
+            <LinearLayout
+                android:id="@+id/linearBack"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="match_parent"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:contentDescription="@string/logout"
+                    android:src="@drawable/ic_back_arrow" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtHeaderTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/linearBack"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_16ssp"
+                tools:text="Device Name" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewHeader"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/relativeHeader"
+            android:background="@color/bg_All" />
+
+        <RelativeLayout
+            android:id="@+id/relativeCameraView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewHeader"
+            android:background="@color/white"
+            tools:layout_height="@dimen/_180sdp">
+
+            <com.thingclips.smart.camera.middleware.widget.ThingCameraView
+                android:id="@+id/camera_video_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:id="@+id/camera_mute"
+                android:layout_width="@dimen/_28sdp"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:contentDescription="@string/camera_desc"
+                android:gravity="center"
+                android:onClick="@{()->clicks.camMuteClick()}"
+                android:src="@drawable/camera_preview_sound_btn_on" />
+
+            <TextView
+                android:id="@+id/camera_quality"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_7sdp"
+                android:layout_marginBottom="@dimen/_7sdp"
+                android:layout_toEndOf="@+id/camera_mute"
+                android:background="@drawable/camera_shape_wirlesswake"
+                android:gravity="center"
+                android:onClick="@{()->clicks.setVideoClarity()}"
+                android:text="@{viewModel.videoClarity==4?@string/hd:@string/sd}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/viewPlayerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/relativeCameraView"
+            android:background="@color/bg_All" />
+
+        <ScrollView
+            android:id="@+id/scrollInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/viewPlayerView"
+            android:overScrollMode="never"
+            android:scrollbars="vertical">
+
+            <include
+                android:id="@+id/camera_control_board"
+                layout="@layout/camera_panel_control_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+</layout>

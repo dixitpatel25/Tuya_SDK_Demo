@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.demo.beavair.fragment.home.HomeFragment"
+        android:label="HomeFragment">
+
+        <action
+            android:id="@+id/action_homeFragment_to_addHomeFragment"
+            app:destination="@id/addHomeFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_qrCodeConfigFragment"
+            app:destination="@id/qrCodeConfigFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_cameraPanelFragment"
+            app:destination="@id/cameraPanelFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/addHomeFragment"
+        android:name="com.demo.beavair.fragment.home.AddHomeFragment"
+        android:label="AddHomeFragment"/>
+
+    <fragment
+        android:id="@+id/qrCodeConfigFragment"
+        android:name="com.demo.beavair.fragment.qrcode.QrCodeConfigFragment"
+        android:label="QrCodeConfigFragment"/>
+
+    <fragment
+        android:id="@+id/cameraPanelFragment"
+        android:name="com.demo.beavair.fragment.ipc.CameraPanelFragment"
+        android:label="CameraPanelFragment"/>
+
+</navigation>

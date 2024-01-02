@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_All"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context="com.demo.beavair.fragment.home.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/_5sdp"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/imgLogout"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/my_black"
+            android:textSize="@dimen/_16ssp" />
+
+        <LinearLayout
+            android:id="@+id/imgLogout"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center_vertical|end"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_14sdp"
+                android:contentDescription="@string/logout"
+                android:src="@drawable/ic_logout" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@color/my_white"/>
+
+    <LinearLayout
+        android:id="@+id/linearHomeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/_14sdp"
+        android:paddingVertical="@dimen/_7sdp"
+        android:background="@color/bg_All"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtHomeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/my_black"
+            android:layout_weight="1"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:text="@string/home_name"/>
+
+        <ImageView
+            android:id="@+id/imgNext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_next_home"
+            android:contentDescription="@string/nexthomeicon" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewHome"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:visibility="visible"
+        android:background="@color/my_white"/>
+
+    <LinearLayout
+        android:id="@+id/linearNoHomeFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/ic_no_home_found"
+            app:tint="@color/colorPrimary"
+            android:contentDescription="@string/no_home_found_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/dark_gray"
+            android:text="@string/not_found_any_home_added"/>
+
+        <Button
+            android:id="@+id/btnAddHome"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:text="@string/add_home"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/my_white"
+            android:background="@drawable/btn_bg"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearNoDeviceFound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:src="@drawable/ic_no_devices"
+            app:tint="@color/colorPrimary"
+            android:contentDescription="@string/no_devices_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/dark_gray"
+            android:text="@string/no_devices"/>
+
+        <Button
+            android:id="@+id/btnAddDevice"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:text="@string/add_device"
+            android:layout_marginVertical="@dimen/_10sdp"
+            android:textSize="@dimen/_11ssp"
+            android:includeFontPadding="false"
+            android:lineSpacingExtra="0dp"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/my_white"
+            android:background="@drawable/btn_bg"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearDeviceList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:paddingVertical="@dimen/_7sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/my_black"
+                android:layout_weight="1"
+                android:textSize="@dimen/_12ssp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/sf_pro_display_bold"
+                android:text="@string/devices_list"/>
+
+            <ImageView
+                android:id="@+id/imgAddDevice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_home"
+                android:contentDescription="@string/add_device_icon" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDevicesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_item_device_list"
+            tools:itemCount="5"/>
+
+    </LinearLayout>
+
+</LinearLayout>

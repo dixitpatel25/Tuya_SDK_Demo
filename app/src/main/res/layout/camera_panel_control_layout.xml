@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clicks"
+            type="com.demo.beavair.fragment.ipc.CameraPanelViewClicks" />
+        <variable
+            name="viewModel"
+            type="com.demo.beavair.fragment.ipc.CameraPanelViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/my_white"
+        android:orientation="vertical"
+        tools:showIn="@layout/fragment_camera_panel">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/speak_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/camera_item_control_btn"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/speak"
+                android:onClick="@{()->clicks.speakClick()}"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                app:drawableTopCompat="@drawable/camera_icon_mic_selector" />
+
+            <TextView
+                android:id="@+id/photo_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/camera_item_control_btn"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:onClick="@{()->clicks.snapShotClick()}"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/snapshot"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                app:drawableTopCompat="@drawable/camera_icon_photo_selector" />
+
+            <TextView
+                android:id="@+id/record_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="@{()->clicks.recordClick()}"
+                android:background="@drawable/camera_item_control_btn"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/record"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                app:drawableTopCompat="@drawable/camera_icon_record_selector" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/replay_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/camera_item_control_btn"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/replay"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                app:drawableTopCompat="@drawable/camera_icon_playback_selector" />
+
+            <TextView
+                android:id="@+id/cloud_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/cloud_video"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:background="@drawable/camera_item_control_btn"
+                app:drawableTopCompat="@drawable/camera_icon_cloud" />
+
+            <TextView
+                android:id="@+id/message_center_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/camera_item_control_btn"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/message"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                app:drawableTopCompat="@drawable/camera_icon_message" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/setting_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/settings"
+                android:drawablePadding="@dimen/_5sdp"
+                android:padding="@dimen/_20sdp"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:background="@drawable/camera_item_control_btn"
+                app:drawableTopCompat="@drawable/camera_icon_setting" />
+
+            <TextView
+                android:id="@+id/info_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawablePadding="@dimen/_5sdp"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/device_info"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:background="@drawable/camera_item_control_btn"
+                app:drawableTopCompat="@drawable/camera_icon_info" />
+
+
+            <TextView
+                android:id="@+id/get_clarity_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="@string/get_clarity"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:background="@drawable/camera_item_control_btn"
+                app:drawableTopCompat="@drawable/camera_icon_hd" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/debug_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/_5sdp"
+                android:padding="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/ipc_debug_tool"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:background="@drawable/camera_item_control_btn"
+                app:drawableTopCompat="@drawable/camera_icon_debug" />
+
+            <TextView
+                android:id="@+id/ptz_Txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:drawablePadding="@dimen/_5sdp"
+                android:padding="@dimen/_20sdp"
+                android:text="@string/ipc_ptz"
+                android:textColor="@color/my_black"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:background="@drawable/camera_item_control_btn"
+                app:drawableTopCompat="@drawable/camera_icon_arrow" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/_5sdp"
+                android:padding="@dimen/_20sdp"
+                android:gravity="center"
+                android:visibility="invisible"
+                android:textSize="@dimen/_12ssp"
+                android:fontFamily="@font/sf_pro_display_medium"
+                android:background="@drawable/camera_item_control_btn"
+                app:drawableTopCompat="@drawable/camera_icon_info" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

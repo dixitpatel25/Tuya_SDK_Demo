@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_All"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context="com.demo.beavair.fragment.home.AddHomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="@dimen/_5sdp">
+
+        <LinearLayout
+            android:id="@+id/linearBack"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_14sdp"
+                android:contentDescription="@string/logout"
+                android:src="@drawable/ic_back_arrow" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/linearBack"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:paddingHorizontal="@dimen/_14sdp"
+            android:text="@string/add_home"
+            android:textColor="@color/my_black"
+            android:textSize="@dimen/_16ssp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:background="@color/my_white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_name"
+        android:textColor="@color/my_black"
+        android:textSize="@dimen/_10ssp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:paddingHorizontal="@dimen/_14sdp"/>
+
+    <EditText
+        android:id="@+id/edtHomeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/jack_home"
+        android:textColorHint="@color/dark_gray"
+        android:textSize="@dimen/_12ssp"
+        android:background="@drawable/edt_bg"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:imeOptions="actionDone"
+        android:inputType="text"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:padding="@dimen/_10sdp"
+        android:autofillHints="name" />
+
+    <Button
+        android:id="@+id/btnAddHome"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:fontFamily="@font/sf_pro_display_bold"
+        android:text="@string/add_home"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/my_white"
+        android:textSize="@dimen/_12ssp" />
+
+</LinearLayout>

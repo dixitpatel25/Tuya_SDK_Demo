@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_white"
+    android:clickable="true"
+    android:focusable="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="@string/txt_login_header"
+            android:textColor="@color/my_black"
+            android:textSize="@dimen/_22ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/txt_login_subheader"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/txt_country"
+            android:textColor="@color/my_black"
+            android:textSize="@dimen/_10ssp" />
+
+        <TextView
+            android:id="@+id/txt_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:textColor="@color/my_black"
+            android:text="@string/india"
+            android:textSize="@dimen/_13ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/light_gray" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/txt_email"
+            android:textColor="@color/my_black"
+            android:textSize="@dimen/_10ssp" />
+
+        <EditText
+            android:id="@+id/txt_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sf_pro_display_medium"
+            android:hint="@string/txt_email_hint"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/my_black"
+            android:textColorHint="@color/light_gray"
+            android:textSize="@dimen/_13ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:text="@string/txt_password"
+            android:textColor="@color/my_black"
+            android:textSize="@dimen/_10ssp" />
+
+        <EditText
+            android:id="@+id/txt_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:hint="@string/txt_password_hint"
+            android:inputType="textPassword"
+            android:textColor="@color/my_black"
+            android:textColorHint="@color/light_gray"
+            android:textSize="@dimen/_13ssp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/txt_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/sf_pro_display_regular"
+            android:textColor="@color/red_error_txt"
+            android:textSize="@dimen/_10ssp" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/btn_bg"
+            android:gravity="center"
+            android:fontFamily="@font/sf_pro_display_bold"
+            android:text="@string/txt_login"
+            android:textAllCaps="true"
+            android:textColor="@color/my_white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:fontFamily="@font/sf_pro_display_semibold"
+            android:text="@string/txt_no_account_signup"
+            android:textSize="14sp" />
+
+        <com.github.ybq.android.spinkit.SpinKitView
+            android:id="@+id/progress_bar"
+            style="@style/SpinKitView.ThreeBounce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:SpinKit_Color="@color/black" />
+
+    </LinearLayout>
+
+</ScrollView>
